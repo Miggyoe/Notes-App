@@ -2,11 +2,12 @@
 notes = []
 
 def edit_note():
-    selected = note_list.curselection()
-    
-    if selected:
-        index = slected[0]
-        notes[index] = text_area.get("1.0", "end").strip()
-        update_list()
+   if not notes:
+        print("\nNo notes available..")
+        return
+
+    print("\nYour notes")
+    for idx, note in enumerate(notes, start=1):
+        
 
 
