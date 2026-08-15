@@ -1,4 +1,4 @@
-notes = []
+notes = []q
 
 def add_note():
     title = input("Add note title: ")
