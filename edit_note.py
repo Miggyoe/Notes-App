@@ -31,11 +31,7 @@ def edit_note():
             print("Notes has been edited! ")
             print(30*"=")
 
-        else:
-            print("Invalid note number.")
-
-    else:
-        print("Please enter a number.")
+        
          
 
 
