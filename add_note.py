@@ -10,6 +10,10 @@ def add_note():
         print(f"Note {title} has been added!")
         print(30*"=")
         return
+    else:
+        print(30*"=")
+        print("Title cannot be empty.")
+        print(30*"=")
 
 def view_note():
     if not notes:
