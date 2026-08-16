@@ -5,7 +5,7 @@ def add_note():
     content = input("Add note text: ")
     if title:
         notes.append({"title": title, "content": content})
-        print(f"Note '{title}' has been added!\n")
+        print(f"\nNote '{title}' has been added!\n")
     else:
         print("Title cannot be empty!\n")
 
@@ -13,11 +13,14 @@ def view_notes():
     if not notes:
         print("\nNo notes available...\n")
         return
-    
-    print("\nYour notes: ")
-    for idx, note in enumerate(notes, start=1):
-        print(f"{idx}. {note['title']}")
-        print(f"   {note['content']}")
+
+    print("\n--- Your Notes ---")
+    count = 1
+
+    for note in notes:
+        print(f"{count}. {note['title']}")
+        print(f"   - {note['content']}")
+        count += 1
     print()
 
 def main():
