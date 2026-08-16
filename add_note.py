@@ -1,45 +1,50 @@
 notes = []
 
 def add_note():
-    title = input("Add note title: ")
-    content = input("Add note text: ")
+    print(30*"=")
+    title = input("Enter note title: ")
+    content = input("Enter note text: ")
     if title:
-        notes.append({"title": title, "content": content})
-        print(f"\nNote '{title}' has been added!\n")
-    else:
-        print("Title cannot be empty!\n")
-
-def view_notes():
-    if not notes:
-        print("\nNo notes available...\n")
+        notes.append({'title': title, 'content': content})
+        print(30*"=")
+        print(f"Note {title} has been added!")
+        print(30*"=")
         return
 
-    print("\n--- Your Notes ---")
-    count = 1
+def view_note():
+    if not notes:
+        print(30*"=")
+        print("No notes available...")
+        print(30*"=")
+        return
+    elif notes:
+        print(30*"=")
+        print("---Your Notes---")
+        count = 1
+        for note in notes:
+            print(f"{count}. {note['title']}")
+            print(f"   - {note['content']}")
+            count += 1
+        print(30*"=")
 
-    for note in notes:
-        print(f"{count}. {note['title']}")
-        print(f"   - {note['content']}")
-        count += 1
-    print()
-
-def main():
-    while True:
-        print("--- Notes App ---")
-        print("1. Add Note")
-        print("2. View Notes")
-        print("3. Exit")
-        choice = input("Choose an option (1/2/3): ").strip()
-        
-        if choice == "1":
-            add_note()
-        elif choice == "2":
-            view_notes()
-        elif choice == "3":
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice! Try again.\n")
-
-if __name__ == "__main__":
-    main()
+while True:
+    print(30*"=")
+    print("---Options---")
+    print("1. Add note")
+    print("2. View note")
+    print("3. Exit")
+    choice = input("Select an option (1/2/3): ")
+    print(30*"=")
+    if choice == "1":
+        add_note()
+    elif choice == "2":
+        view_note()
+    elif choice == "3":
+        print(30*"=")
+        print("Goodbye!")
+        print(30*"=")
+        break
+    else:
+        print(30*"=")
+        print("Invalid.")
+        print(30*"=")
