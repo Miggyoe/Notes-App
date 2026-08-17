@@ -1,6 +1,7 @@
 from add_note import add_note
 from view_note import view_note
 from edit_note import edit_note
+from search_note import search
 
 def main():
     notes = []
@@ -11,8 +12,10 @@ def main():
         print("1. Add note")
         print("2. View note")
         print("3. Edit note")
-        print("4. Exit")
-        choice = input("Select an option (1/2/3/4): ")
+        print("4. Search note")
+        print("5. Delete note")
+        print("6. Exit")
+        choice = input("Select an option (1/2/3/4/5/6): ")
         print(30*"=")
         if choice == "1":
             add_note(notes)
@@ -21,6 +24,10 @@ def main():
         elif choice == "3":
             edit_note(notes)
         elif choice == "4":
+            search(notes)
+        elif choice == "5":
+            delete_note(notes)
+        elif choice == "6":
             print(30*"=")
             print("Goodbye!")
             print(30*"=")
