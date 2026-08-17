@@ -2,6 +2,7 @@ from add_note import add_note
 from view_note import view_note
 from edit_note import edit_note
 from search_note import search_note
+from delete_note import delete_note
 
 def main():
     notes = []
