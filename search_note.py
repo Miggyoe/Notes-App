@@ -7,12 +7,13 @@
 #   "adrian pogi"
 # ]
 
-def search(notes):
+def search_note(notes):
     print("="*30)
     keyword = input("search note: ").lower()
     print("="*30)
     result = [note for note in notes if keyword in note['title'].lower() or keyword in note['content'].lower()]
     if result:
+        print("="*30)
         print("\nSearch result:")
         print("="*30)
         for note in result:

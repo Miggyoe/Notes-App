@@ -1,7 +1,7 @@
 from add_note import add_note
 from view_note import view_note
 from edit_note import edit_note
-from search_note import search
+from search_note import search_note
 
 def main():
     notes = []
@@ -24,7 +24,7 @@ def main():
         elif choice == "3":
             edit_note(notes)
         elif choice == "4":
-            search(notes)
+            search_note(notes)
         elif choice == "5":
             delete_note(notes)
         elif choice == "6":
