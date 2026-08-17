@@ -32,11 +32,14 @@ def edit_note(notes):
             print("Notes has been edited! ")
             print(30*"=")
 
+        else:
+            print(30*"=")
+            print("Invalid note number.")
+            print(30*"=")
     else:
         print(30*"=")
-        print("Invalid note number.")
+        print("Invalid input.")
         print(30*"=")
-        
          
 
 
