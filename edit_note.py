@@ -1,13 +1,14 @@
 # Adrian
+from view_note import view_note
 
-def edit_note():
+def edit_note(notes):
     if not notes:
         print(30*"=")
         print("No notes available..")
         print(30*"=")
         return
 
-    view_note()
+    view_note(notes)
 
     choice = input("Select a note number to edit: ")
 
@@ -16,10 +17,10 @@ def edit_note():
 
         if 0 <= index < len(notes):
             print(30*"=")
-            print(f"editing note:, {notes[index]["title"]}")
+            print(f"Editing note: {notes[index]['title']}")
 
-            title = input("enter new title: ")
-            content = input("enter new note text: ")
+            title = input("Enter new title: ")
+            content = input("Enter new note text: ")
 
             if title:
                 notes[index]['title'] = title
